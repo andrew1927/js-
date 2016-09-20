@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.hidden{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<input type="button" id="input">
+	<p id="text">Текст</p>	
+
+	<script>
+
+		var elInput = document.getElementById("input"),
+			elParagraph = document.getElementById("text"),
+			InputValue1 = "Скрыть!",
+			InputValue2 = "Показать";
+
+			elInput.value = InputValue1;
+
+		
+
+
+			elInput.addEventListener("click", function(){
+				elParagraph.classList.toggle("hidden");
+				if(elInput.value == InputValue1){
+					elInput.value = InputValue2;
+				}
+				else{
+					elInput.value = InputValue1;
+				}
+			})
+	</script>
+</body>
+</html>

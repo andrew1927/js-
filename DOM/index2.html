@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<input type="text" placeholder="firstname" class="input">
+	<input type="text" placeholder="lastname" class="input">
+	<input type="text" placeholder="age" class="input">
+	<button id="btnName">click</button>
+	<button id="btnAge">click</button>
+	<div id="container"></div>
+	<script>
+		var ElInputFirstName = document.getElementsByClassName("input")[0];
+		var ElInputLastName = document.getElementsByClassName("input")[1];
+		var ElInputAge = document.getElementsByClassName("input")[2];
+
+		var ElBtnName = document.getElementById("btnName");
+		var ElBtnAge = document.getElementById("btnAge");
+
+		var paragraph = document.createElement("p");
+
+		ElBtnName.addEventListener("click", function(){
+			paragraph.innerHTML = 'Привіт ' + ElInputFirstName.value + ' ' + ElInputLastName.value;
+
+			container.appendChild(paragraph);	
+		})
+
+		ElBtnAge.addEventListener("click", function(){
+			paragraph.innerHTML = ElInputFirstName.value + " я знаю, що тобі " + ElInputAge.value + " років";
+		})	
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">Click on</button>
+	<script>
+		var ElBtn = document.getElementById("btn");
+
+		ElBtn.addEventListener("click", function(){
+			this.innerHTML = "click off";
+		})
+	</script>
+	
+</body>
+</html>

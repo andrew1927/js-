@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div class = "text">
+		<h1>Lorem</h1>
+		<button class="btn">X</button>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eos est nisi! Tempora porro libero cumque architecto fuga. Assumenda eligendi deserunt corporis aliquid, vero asperiores reiciendis ab ipsum quae, distinctio.</p>
+	</div>
+	<div class = "text">
+		<h1>Lorem ipsum dolor</h1>
+		<button class = "btn">X</button>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eos est nisi! Tempora porro libero cumque architecto fuga. Assumenda eligendi deserunt corporis aliquid, vero asperiores reiciendis ab ipsum quae, distinctio.</p>
+	</div>
+	<div class = "text">
+		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, natus.</h1>
+		<button class = "btn">X</button>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eos est nisi! Tempora porro libero cumque architecto fuga. Assumenda eligendi deserunt corporis aliquid, vero asperiores reiciendis ab ipsum quae, distinctio.</p>
+	</div>
+	<script defer>
+		var elText = document.getElementsByClassName("text")[0],
+			elBtn = document.getElementsByClassName("btn")[0];
+
+		elBtn.addEventListener("click", function(){
+			elText.style.display = "none";
+		})	
+
+		var elText1 = document.getElementsByClassName("text")[1],
+			elBtn1 = document.getElementsByClassName("btn")[1];
+
+		elBtn1.addEventListener("click", function(){
+			elText1.style.display = "none";
+		})	
+
+		var elText2 = document.getElementsByClassName("text")[2],
+			elBtn2 = document.getElementsByClassName("btn")[2];
+
+		elBtn2.addEventListener("click", function(){
+			elText2.style.display = "none";
+		})	
+
+
+	</script>
+</body>
+</html>

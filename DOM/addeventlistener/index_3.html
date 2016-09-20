@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	span{
+		cursor: pointer;	
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+	}	
+	.menu-closed::before{
+		content: "▶";
+		color: green;
+	}
+	.menu-closed ul{
+		display: none;
+	}
+	.menu-open::before{
+		content:"▼";
+		color: green;
+	}
+	.menu-open ul{
+		display: block;
+	}
+	.menu-open li{
+		margin-left: 20px;
+		list-style: none;
+	}
+</style>
+<body>
+	<div id='menu' class="menu-closed">
+		<span id = "button">Сладости (нажми меня)!</span>
+		<ul>
+			<li>Торт</li>
+			<li>Пончик</li>
+			<li>Пироженое</li>
+		</ul>
+	</div>
+	<script>
+		var elMenu = document.getElementById("menu"),
+			elSpan = document.getElementById("button");
+
+		elSpan.addEventListener("click", function(){
+		elMenu.classList.toggle("menu-open");
+		})
+		
+	</script>
+</body>
+</html>

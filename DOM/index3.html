@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style2.css">
+	<style>
+		p, div{
+			display: inline-block;
+		}
+		input{
+			margin: 0 20px;
+		}
+		div{
+			width: 200px;
+			height: 20px;
+			border: 2px solid blue;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="firstname" class="input">	
+	<p>вы ввели firstname:</p>
+	<div id="firstcontainer"></div>	
+	<input type="text" placeholder="lastname" class="input">	
+	<p>вы ввели lastname:</p>
+	<div id="lastcontainer"></div>
+</body>
+	<script>
+		var ElInputFirstName = document.getElementsByClassName("input")[0],
+			ElInputLastName = document.getElementsByClassName("input")[1],
+			ElFirstContainer = document.getElementById("firstcontainer"),
+			ElLastContainer = document.getElementById("lastcontainer"); 
+
+			ElInputFirstName.addEventListener("change", function(){
+				ElFirstContainer.innerHTML = ElInputFirstName.value;
+			});
+
+			ElInputLastName.oninput = function(){
+				ElLastContainer.innerHTML = ElInputLastName.value;
+			}
+	</script>	
+</html>

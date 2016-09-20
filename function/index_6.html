@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var access = prompt("Сколько вам лет?");
+
+		if(access >= 18){
+			alert("Welcome!");
+		}
+		else{
+			alert("Goodby!");
+			}
+	</script>
+	<script>
+		function checkAge(age){
+			if ( age >18){
+				return true;
+			} else{
+				return confirm("Родители разрешили?");
+			}
+		} 
+
+		var age = prompt("Сколько вам лет?");
+
+			if(checkAge(age)){
+				alert("Доступ разрешен");
+			} else("Доступ закрыт");
+	</script>
+</body>
+</html>

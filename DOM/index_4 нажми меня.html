@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value = "Click on me" onclick = "alert('Thank you for your click!')">
+	<input type="button" value = "Нажми меня" id="input">
+	<input type="button" value = "Нажми и меня" class = "button">
+	<script>
+		var ElInput = document.getElementById("input"),
+			ElBtn = document.getElementsByClassName("button")[0];
+
+
+		ElInput.onclick = function(){
+			alert("Thank you for your click!")
+		};
+
+		ElBtn.addEventListener("click", function(){
+			alert("Thank You for your click!");
+		});
+	
+	</script>
+</body>
+</html>
