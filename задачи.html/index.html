@@ -15,12 +15,33 @@
 			elBtn = document.getElementById("btn"),
 			elGoods = document.getElementById("goods");
 
+		var basket = []; 	
+
+		function delGoods(){
+			var elMas = basket.indexOf(this.parentNode.firstChild.innerHTML);
+			basket.splice(elMas,1);
+
+			elGoods.removeChild(this.parentNode);
+
+			console.log(basket);
+		}
   
 			elBtn.addEventListener("click", function(){
 				var newLi = document.createElement('li'),
-					textElem = document.createTextNode(elInput.value);
+					newButton = document.createElement('button'),
+					textElem = document.createElement('span');
+
+				basket.push(elInput.value);
+				console.log(basket);
+
+				textElem.innerHTML = elInput.value;
+				newButton.innerHTML = "Delete";
+				
+				newButton.addEventListener("click", delGoods);
 
 				newLi.appendChild(textElem);
+				newLi.appendChild(newButton);
+
 				elGoods.appendChild(newLi);
 			})
 	</script>
