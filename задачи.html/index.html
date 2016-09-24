@@ -27,6 +27,10 @@
 		}
   
 			elBtn.addEventListener("click", function(){
+				if(basket.indexOf(elInput.value) >= 0){
+					alert("такой товар уже есть");
+					return;
+				}
 				var newLi = document.createElement('li'),
 					newButton = document.createElement('button'),
 					textElem = document.createElement('span');
